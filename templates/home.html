@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    {% block content %}
+    <div style="text-align:center">
+        <h1 style="font-size:xxx-large;">Lakshya- The Online Learning Portal</h1>
+        <h2 style="font-size:xx-large;">Lakshya is the idea that focuses on Skills.</h2>
+        <h2 style="padding-top: 5px; font-size:xx-large;">Quizzes assignments, online playground, certificates, and many more.</h2> 
+        <h2 style="padding-top: 5px; font-size:xx-large;">Best courses curated by students who have learned from those and also community support is now in your hands.</h2>
+        <button style="background:url(https://thumbs.dreamstime.com/b/e-learning-platform-online-e-learning-platform-online-course-students-caps-happy-to-finish-university-education-vector-157146851.jpg); background-size: 100%; width:800px; height: 532px;" disabled></button>
+        <br>
+        <button style="height: 100px; width:200px; font-size: 20px;background-color: #00a2e2; border-radius: 15px; margin: 30px;" onclick="location.href = '/courses'">Courses</button>
+        <button style="height: 100px; width:200px; font-size: 20px;background-color: #00a2e2; border-radius: 15px; margin: 30px;" onclick="location.href = '/about'">About</button>
+        <button style="height: 100px; width:200px; font-size: 20px;background-color: #00a2e2; border-radius: 15px; margin: 30px;" onclick="location.href = '/contact'">Contact</button>
+    </div>
+
+    {% endblock %}
+
+</body>
+</html>

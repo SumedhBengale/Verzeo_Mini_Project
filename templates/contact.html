@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    <script>
+        function thank_you_message(){
+            window.alert("Thank you for contacting us. Our representative will get in contact with you soon.")
+        }
+    </script>
+    {% extends 'base.html' %}
+    {% block content %}
+    <div style="text-align: center;">
+        <h1 style="font-size:xxx-large;">Contact Us</h1>
+    </div>
+
+    <div style="float: left;">
+        <form method="post" style="margin: 50px;">
+            {% csrf_token %}
+            <input type="text" name="name" style="height: 30px; width: 500px; margin: 20px; border-radius: 5px;" placeholder="Your Name"required>
+            <br> 
+            <input type="email" name="email" style="height: 30px; width: 500px; margin: 20px; border-radius: 5px;" placeholder="Your Email" required>
+            <br>
+            <textarea type="textarea" name="ask_us" style="height: 300px; width: 500px; margin: 20px; border-radius: 5px; resize: none;" placeholder="Ask Us Anything" rows="4" cols="50" required ></textarea>
+            <br>
+            <input type="submit" style="height: 30px; width: 300px; margin: 20px; border-radius: 5px;" onclick=thank_you_message()>
+        </form>
+    </div>
+
+    <div style="float: right;">
+        <button style="background:url(http://www.downloadclipart.net/medium/support-png-free-download.png); border: none; background-size: 100%; width:600px; height: 600px; margin-right: 60px;" disabled></button>
+
+    </div>
+    {% endblock %}
+
+</body>
+</html>
